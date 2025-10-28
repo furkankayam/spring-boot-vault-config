@@ -30,6 +30,7 @@ Used Technologies in The Project:
 ```sh
 ./gradlew bootRun
 The application will start on http://localhost:8080
+```
 
 <br>
 
