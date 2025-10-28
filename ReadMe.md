@@ -37,20 +37,21 @@ The application will start on http://localhost:8080
 ## 🔌 API Endpoints
 
 ### Test Endpoint
-http
-GET http://localhost:8080/hello
+
+**GET** `http://localhost:8080/hello`
 
 Returns the secret value from Vault.
 
 ### Refresh Configuration
-http
-POST http://localhost:8080/actuator/refresh
+
+**POST** `http://localhost:8080/actuator/refresh`
 
 Refreshes the application configuration from Vault without restarting the application.
 
 **Example with cURL:**
-sh
+```bash
 curl -X POST http://localhost:8080/actuator/refresh
+```
 
 <details>
 <summary>📸 Click to see the refresh response</summary>
