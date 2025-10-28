@@ -65,7 +65,7 @@ The response shows which configuration properties were successfully reloaded fro
 
 ## 🔄 Dynamic Configuration Update
 
-This project uses @RefreshScope to enable dynamic configuration updates:
+This project uses `@RefreshScope` to enable dynamic configuration updates:
 
 Update your secret value in Vault
 Call the refresh endpoint: POST http://localhost:8080/actuator/refresh
