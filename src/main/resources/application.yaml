@@ -1,0 +1,40 @@
+# Application Config
+server:
+  port: 8080
+
+spring:
+  application:
+    name: spring-boot-vault-config
+
+  config:
+    import: optional:vault://
+  cloud:
+    config:
+      enabled: false
+    vault:
+      enabled: true
+      authentication: token
+
+      # IntelliJ IDEA Environment Variables
+      # Edit Configurations
+      # |_ Modify Options
+      #   |_ Environment Variables (✔️)
+      # Example: "VAULT_TOKEN=---;VAULT_ADDR=http://localhost:8200;"
+      uri: ${VAULT_ADDR}
+      token: ${VAULT_TOKEN}
+
+      kv:
+        enabled: true
+        backend: base-path
+        default-context: child-path
+
+# Example: reading name from Vault
+app:
+  user:
+    name: ${name}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh

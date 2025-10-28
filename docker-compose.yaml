@@ -1,0 +1,34 @@
+# Services
+services:
+
+  # Vault Service
+  vault:
+    image: hashicorp/vault:1.20
+    container_name: vault
+    restart: unless-stopped
+    environment:
+      VAULT_ADDR: 'http://127.0.0.1:8200'
+    cap_add:
+      - IPC_LOCK
+    ports:
+      - "8200:8200"
+    volumes:
+      - ./vault/file:/vault/file
+      - ./vault/logs:/vault/logs
+      - ./vault/config:/vault/config
+    entrypoint: ["vault", "server", "-config=/vault/config/vault.json"]
+    networks:
+      - my-network
+
+
+# Volumes
+volumes:
+  vault-data:
+  vault-logs:
+  vault-config:
+
+# Networks
+networks:
+  my-network:
+    driver: bridge
+
