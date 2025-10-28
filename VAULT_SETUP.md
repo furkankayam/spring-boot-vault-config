@@ -6,6 +6,8 @@
 docker-compose up -d
 ```
 
+<br>
+
 ## 2. Initialize Vault
 
 <div align="center">
@@ -33,6 +35,8 @@ Download the JSON file containing your unseal keys and root token.
 
 > ⚠️ **Important:** Keep this file secure! These keys are required to unseal Vault and the root token provides full access.
 
+<br>
+
 ## 3. Unseal Vault
 
 <div align="center">
@@ -41,6 +45,8 @@ Download the JSON file containing your unseal keys and root token.
 
 Use the unseal keys from the previous step to unseal your Vault instance.
 
+<br>
+
 ## 4. Configure Secrets
 
 <div align="center">
@@ -48,6 +54,8 @@ Use the unseal keys from the previous step to unseal your Vault instance.
 </div>
 
 Create and manage your secrets in Vault.
+
+<br>
 
 ## 5. Configure IntelliJ IDEA Environment Variables
 
