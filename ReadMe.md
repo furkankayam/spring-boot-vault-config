@@ -1,4 +1,4 @@
-# 🚀 Spring Boot Vault Config
+# 🔒 Spring Boot Vault Config
 
 <br>
 
